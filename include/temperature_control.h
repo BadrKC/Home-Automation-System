@@ -9,8 +9,8 @@
 
 
 // Function Declarations
-float setRoomTemperature(float temperatureset);
-float adjustRoomTemperature();
+void setRoomTemperature(float temperatureset);
+void adjustRoomTemperature();
 void displayTemperature(void);
 
 #endif // TEMPERATURE_CONTROL_H

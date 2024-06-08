@@ -4,15 +4,11 @@
 #include "../include/temperature_control.h" // Header file for temperature control functions
 
 float currentTemperature = 55;
-bool AC_State = OFF;  
-
-int main(){
-    
+bool AC_State = OFF;
 
 
-float setRoomTemperature(float temperatureset){
+void setRoomTemperature(float temperatureset){
     currentTemperature = temperatureset;
-    return currentTemperature;
 }
 
 void adjustRoomTemperature(){
@@ -23,16 +19,14 @@ void adjustRoomTemperature(){
     {
         AC_State = ON;
         currentTemperature += TEMPERATURE_INCREMENTER;
-        // Sleep for 1 seconds (1000 milliseconds)
-        Sleep(500);
+        Sleep(100);
         printf("\t\t\tThe current temperature is %.2f and the AC is ON \n",currentTemperature);
     }
     else if (currentTemperature > OPTIMAL_TEMPERATURE)
     {
         AC_State = ON;
         currentTemperature -= TEMPERATURE_INCREMENTER;
-        // Sleep for 1 seconds (1000 milliseconds)
-        Sleep(500);
+        Sleep(100);
         printf("\t\t\tThe current temperature is %.2f and the AC is ON \n",currentTemperature);        
     }else
     {
@@ -46,8 +40,9 @@ void displayTemperature(void){
 }
 
 // Test core functionalities
+int main(){
 displayTemperature();
-setRoomTemperature(45.5);
+setRoomTemperature(45.75);
 displayTemperature();
 adjustRoomTemperature();
 displayTemperature();
