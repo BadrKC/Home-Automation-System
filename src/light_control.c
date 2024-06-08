@@ -25,11 +25,11 @@ void displayLightState(){
 }
 
 // For testing purpose
-int main(){
-    turnOnLight();
-    displayLightState();
-    turnOffLight();
-    displayLightState();
-    toggleLight();
-    displayLightState();
-}
+// int main(){
+//     turnOnLight();
+//     displayLightState();
+//     turnOffLight();
+//     displayLightState();
+//     toggleLight();
+//     displayLightState();
+// }
