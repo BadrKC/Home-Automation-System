@@ -30,9 +30,9 @@ void checkSystemStatus(){
 }
 // for testing purpose
 
-int main(){
-    armSystem();
-    checkSystemStatus();
-    disarmSystem();
-    checkSystemStatus();
-}
+// int main(){
+//     armSystem();
+//     checkSystemStatus();
+//     disarmSystem();
+//     checkSystemStatus();
+// }
