@@ -21,42 +21,46 @@ int main(){
     printf(" 5. Activate Security\n");
     printf(" 6. Deactivate Security\n");
     printf(" 7. Display Security State\n");
-    printf(" 8. Exit\n");
+    printf(" 8. Display Temperature\n");
+    printf(" 9. Exit\n");
     printf(" Enter your choice please:\n");
 
     // Read user input
     scanf("%d", &choice);
 
     // Execute the appropriate action based on user's choice
-    // switch (choice) {
-    //     case 1:
-    //         turnOnLight();
-    //         displayLightState();
-    //         break;
-    //     case 2:
-    //         turnOffLight();
-    //         displayLightState();
-    //         break;
-    //     case 3:
-    //         // tempvalue = setRoomTemperature(40.5); // Set Temperature
-    //         printf("The temperature of the room is %.2f\n", setRoomTemperature(40.5));
-    //         break;
-    //     case 4:
-    //         adjustRoomTemperature();
-    //         break;
-    //     case 5:
-    //         activateSecuritySystem(); 
-    //         break;
-    //     case 6:
-    //         deactivateSecuritySystem(); 
-    //         break;
-    //     case 7:
-    //         displaySecurityState(); 
-    //         break;
-    //     default:
-    //         printf("Your choice is not valid\n");
-    //         break; // Default case if no valid choice is entered
-    // }
+    switch (choice) {
+        case 1:
+            turnOnLight();
+            displayLightState();
+            break;
+        case 2:
+            turnOffLight();
+            displayLightState();
+            break;
+        case 3:
+            // tempvalue = setRoomTemperature(40.5); // Set Temperature
+            setRoomTemperature(40.5);
+            break;
+        case 4:
+            adjustRoomTemperature();
+            break;
+        case 5:
+            armSystem(); 
+            break;
+        case 6:
+            disarmSystem(); 
+            break;
+        case 7:
+            checkSystemStatus(); 
+            break;
+        case 8:
+            displayTemperature(); 
+            break;
+        default:
+            printf("Your choice is not valid\n");
+            break; // Default case if no valid choice is entered
+    }
     }
     return 0; // Return 0 to indicate successful execution
 }

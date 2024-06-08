@@ -40,11 +40,11 @@ void displayTemperature(void){
 }
 
 // Test core functionalities
-int main(){
-displayTemperature();
-setRoomTemperature(45.75);
-displayTemperature();
-adjustRoomTemperature();
-displayTemperature();
+// int main(){
+// displayTemperature();
+// setRoomTemperature(45.75);
+// displayTemperature();
+// adjustRoomTemperature();
+// displayTemperature();
 
-}
+// }
