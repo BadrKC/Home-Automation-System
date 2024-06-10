@@ -1,18 +1,16 @@
 #include <stdio.h> // Include standard I/O library for printf and scanf functions
 #include "../include/light_control.h" // Include header for light control functions
 #include "../include/temperature_control.h" // Header file for temperature control functions
-#include "../include/security_control.h" // Include header 
+#include "../include/security_control.h" // Include header
+#include "../include/user_interface.h" // Include header 
 
     // * Integrate functions to display current temperature, AC state, light status, and security system status.
     // * Ensure real-time updates in the main program.
 
-int main(){
+void runHomeAutomationSystem(){
     int choice; // Variable to store the user's menu choice
-    // float tempvalue = 0;
 
-    // Main loop to keep the program running
-    while (1) {
-                    // Display the main menu
+    // Display the main menu
     printf("\nHome Automation System\n");
     printf(" 1. Turn on Light\n");
     printf(" 2. Turn off Light\n");
@@ -39,7 +37,6 @@ int main(){
             displayLightState();
             break;
         case 3:
-            // tempvalue = setRoomTemperature(40.5); // Set Temperature
             setRoomTemperature(40.5);
             break;
         case 4:
@@ -61,6 +58,4 @@ int main(){
             printf("Your choice is not valid\n");
             break; // Default case if no valid choice is entered
     }
-    }
-    return 0; // Return 0 to indicate successful execution
 }

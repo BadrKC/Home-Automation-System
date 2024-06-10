@@ -18,7 +18,7 @@ void toggleLight(){
 
 void displayLightState(){
     if (lights == 0) {
-        printf(" ight is: OFF\n"); // Print message indicating that the lights are off
+        printf("Light is: OFF\n"); // Print message indicating that the lights are off
     } else {
         printf("Light is: ON\n"); // Print message indicating that the lights are on
     }
