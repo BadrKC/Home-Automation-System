@@ -1,6 +1,7 @@
 #include <stdio.h> // Include the standard I/O library for printf function
 #include <stdbool.h>          // Include standard library for boolean type
 #include "../include/light_control.h" // Include header for light control functions
+#include "../include/config.h" // Include header
 
 bool lights = 0;
 
@@ -24,12 +25,14 @@ void displayLightState(){
     }
 }
 
+#ifdef TESTING
 // For testing purpose
-// int main(){
-//     turnOnLight();
-//     displayLightState();
-//     turnOffLight();
-//     displayLightState();
-//     toggleLight();
-//     displayLightState();
-// }
+int main(){
+    turnOnLight();
+    displayLightState();
+    turnOffLight();
+    displayLightState();
+    toggleLight();
+    displayLightState();
+}
+#endif

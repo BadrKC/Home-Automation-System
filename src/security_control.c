@@ -28,13 +28,13 @@ void checkSystemStatus(){
     }
     
 }
-// for testing purpose
 
+#ifdef TESTING
+// for testing purpose
 int main(){
     armSystem();
     checkSystemStatus();
     disarmSystem();
     checkSystemStatus();
 }
-
 #endif

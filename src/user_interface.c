@@ -2,7 +2,8 @@
 #include "../include/light_control.h" // Include header for light control functions
 #include "../include/temperature_control.h" // Header file for temperature control functions
 #include "../include/security_control.h" // Include header
-#include "../include/user_interface.h" // Include header 
+#include "../include/user_interface.h" // Include header
+#include "../include/config.h" // Include header
 
     // * Integrate functions to display current temperature, AC state, light status, and security system status.
     // * Ensure real-time updates in the main program.
@@ -59,3 +60,13 @@ void runHomeAutomationSystem(){
             break; // Default case if no valid choice is entered
     }
 }
+
+#ifdef TESTING
+int main() {
+    // Main loop to keep the program running
+    while (1) {
+        runHomeAutomationSystem();
+    }
+    return 0;
+}
+#endif

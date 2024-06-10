@@ -2,6 +2,7 @@
 #include <stdbool.h>   // Boolean type and values
 #include <windows.h>
 #include "../include/temperature_control.h" // Header file for temperature control functions
+#include "../include/config.h" // Include header
 
 float currentTemperature = 55;
 bool AC_State = OFF;
@@ -39,12 +40,13 @@ void displayTemperature(void){
     printf("The ambiant temperature is %.2f\n", currentTemperature);
 }
 
+#ifdef TESTING
 // Test core functionalities
-// int main(){
-// displayTemperature();
-// setRoomTemperature(45.75);
-// displayTemperature();
-// adjustRoomTemperature();
-// displayTemperature();
-
-// }
+int main(){
+displayTemperature();
+setRoomTemperature(45.75);
+displayTemperature();
+adjustRoomTemperature();
+displayTemperature();
+}
+#endif
