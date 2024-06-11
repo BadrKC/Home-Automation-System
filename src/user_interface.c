@@ -1,4 +1,5 @@
 #include <stdio.h> // Include standard I/O library for printf and scanf functions
+#include <stdbool.h>   // Boolean type and values
 #include "../include/light_control.h" // Include header for light control functions
 #include "../include/temperature_control.h" // Header file for temperature control functions
 #include "../include/security_control.h" // Include header
@@ -10,6 +11,8 @@
 
 void runHomeAutomationSystem(){
     int choice; // Variable to store the user's menu choice
+    float currentTemperature = 55;
+    bool AC_State = OFF;
 
     while (1){
         // Display the main menu
@@ -50,10 +53,10 @@ void runHomeAutomationSystem(){
                 displayLightState();
                 break;
             case 3:
-                setRoomTemperature(40.5);
+                setRoomTemperature(&currentTemperature,18.5);
                 break;
             case 4:
-                adjustRoomTemperature();
+                adjustRoomTemperature(&currentTemperature, &AC_State);
                 break;
             case 5:
                 armSystem(); 
@@ -65,7 +68,7 @@ void runHomeAutomationSystem(){
                 checkSystemStatus(); 
                 break;
             case 8:
-                displayTemperature(); 
+                displayTemperature(currentTemperature); 
                 break;
             case 9:
                 printf("Exiting the system...\n");
