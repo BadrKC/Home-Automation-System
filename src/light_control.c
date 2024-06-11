@@ -3,22 +3,22 @@
 #include "../include/light_control.h" // Include header for light control functions
 #include "../include/config.h" // Include header
 
-bool lights = 0;
+static bool lights = false;
 
 void turnOnLight(){
-    lights = 1;
+    lights = true;
 }
 
 void turnOffLight(){
-    lights = 0;
+    lights = false;
 }
 
 void toggleLight(){
-    lights = ~lights;
+    lights = !lights;
 }
 
 void displayLightState(){
-    if (lights == 0) {
+    if (lights == false) {
         printf("Light is: OFF\n"); // Print message indicating that the lights are off
     } else {
         printf("Light is: ON\n"); // Print message indicating that the lights are on
@@ -34,5 +34,6 @@ int main(){
     displayLightState();
     toggleLight();
     displayLightState();
+    return 0;
 }
 #endif

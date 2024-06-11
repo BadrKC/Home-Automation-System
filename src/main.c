@@ -4,8 +4,6 @@
 int main() {
 
     // Main loop to keep the program running
-    while (1) {
         runHomeAutomationSystem();
-    }
     return 0;
 }
