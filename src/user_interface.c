@@ -7,9 +7,6 @@
 #include "../include/config.h" // Include configuration header
 #include "../include/cross_platform_sleep.h" // Include cross-platform sleep header
 
-// Integrate functions to display current temperature, AC state, light status, and security system status.
-// Ensure real-time updates in the main program.
-
 void runHomeAutomationSystem() {
     int choice; // Variable to store the user's menu choice
     float currentTemperature = 55; // Initialize current temperature
