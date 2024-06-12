@@ -62,10 +62,10 @@ void runHomeAutomationSystem(){
                 armSystem(); 
                 break;
             case 6:
-                disarmSystem(); 
+                disarmSystem();
                 break;
             case 7:
-                checkSystemStatus(); 
+                printf("The Security system is %s \n",checkSystemStatus() ? "active" : "inactive");
                 break;
             case 8:
                 displayTemperature(currentTemperature); 

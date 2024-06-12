@@ -7,6 +7,6 @@
 // Function Declarations
 void armSystem();
 void disarmSystem();
-void checkSystemStatus();
+bool checkSystemStatus();
 
 #endif // SECURITY_SYSTEM_H
