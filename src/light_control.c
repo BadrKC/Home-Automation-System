@@ -1,39 +1,52 @@
 #include <stdio.h> // Include the standard I/O library for printf function
-#include <stdbool.h>          // Include standard library for boolean type
+#include <stdbool.h> // Include standard library for boolean type
 #include "../include/light_control.h" // Include header for light control functions
-#include "../include/config.h" // Include header
+#include "../include/config.h" // Include configuration header
 
+// Static variable to keep track of the light state
 static bool lights = false;
 
-void turnOnLight(){
+/**
+ * Function to turn on the light.
+ */
+void turnOnLight() {
     lights = true;
 }
 
-void turnOffLight(){
+/**
+ * Function to turn off the light.
+ */
+void turnOffLight() {
     lights = false;
 }
 
-void toggleLight(){
+/**
+ * Function to toggle the light state.
+ */
+void toggleLight() {
     lights = !lights;
 }
 
-void displayLightState(){
+/**
+ * Function to display the current light state.
+ */
+void displayLightState() {
     if (lights == false) {
-        printf("Light is: OFF\n"); // Print message indicating that the lights are off
+        printf("Light is: OFF\n"); // Print message indicating that the light is off
     } else {
-        printf("Light is: ON\n"); // Print message indicating that the lights are on
+        printf("Light is: ON\n"); // Print message indicating that the light is on
     }
 }
 
 #ifdef TESTING
-// For testing purpose
-int main(){
-    turnOnLight();
-    displayLightState();
-    turnOffLight();
-    displayLightState();
-    toggleLight();
-    displayLightState();
+// Main function for testing purposes
+int main() {
+    turnOnLight(); // Turn on the light
+    displayLightState(); // Display the current light state
+    turnOffLight(); // Turn off the light
+    displayLightState(); // Display the current light state
+    toggleLight(); // Toggle the light state
+    displayLightState(); // Display the current light state
     return 0;
 }
 #endif
