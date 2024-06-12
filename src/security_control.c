@@ -13,14 +13,8 @@ void disarmSystem(){
     securityState = OFF;
 }
 
-void checkSystemStatus(){
-    if (securityState == ON)
-    {
-        printf("Security system activated.\n");
-    }else
-    {
-        printf("Security system inactive.\n");
-    }
+bool checkSystemStatus(){
+    return (securityState == ON);
 }
 
 #ifdef TESTING
