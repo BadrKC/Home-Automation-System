@@ -1,38 +1,40 @@
-#include <stdio.h>
-#include <stdbool.h>
-#include "../include/security_control.h" // Include header 
+#include <stdio.h> // Include the standard I/O library for printf function
+#include <stdbool.h> // Include the standard library for boolean type
+#include "../include/security_control.h" // Include header for security control functions
+#include "../include/config.h" // Include configuration header
 
-    // * Implement basic security system control functions (e.g., `armSystem`, `disarmSystem`, `checkSystemStatus`).
-    // * Implement function to display security system status.
-    // * Test security system functionalities.
+// Static variable to keep track of the security state
+static bool securityState = OFF;
 
-bool securityState = OFF;
-
-void armSystem(){
+/**
+ * Function to arm the security system.
+ */
+void armSystem() {
     securityState = ON;
-    // printf("Security system activated.\n");
 }
-void disarmSystem(){
+
+/**
+ * Function to disarm the security system.
+ */
+void disarmSystem() {
     securityState = OFF;
-    // printf("Security system deactivated.\n");
 }
 
-void checkSystemStatus(){
-    if (securityState == ON)
-    {
-        printf("Security system activate.\n");
-
-    }else
-    {
-        printf("Security system inactivate.\n");
-    }
-    
+/**
+ * Function to check the status of the security system.
+ * @return true if the security system is armed, false otherwise.
+ */
+bool checkSystemStatus() {
+    return (securityState == ON);
 }
-// for testing purpose
 
-// int main(){
-//     armSystem();
-//     checkSystemStatus();
-//     disarmSystem();
-//     checkSystemStatus();
-// }
+#ifdef TESTING
+// Main function for testing purposes
+int main() {
+    armSystem(); // Arm the security system
+    checkSystemStatus(); // Check and return the status of the security system
+    disarmSystem(); // Disarm the security system
+    checkSystemStatus(); // Check and return the status of the security system
+    return 0;
+}
+#endif

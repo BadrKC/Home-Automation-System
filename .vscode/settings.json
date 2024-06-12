@@ -1,5 +1,9 @@
 {
     "files.associations": {
-        "light_control.h": "c"
+        "light_control.h": "c",
+        "security_control.h": "c",
+        "config.h": "c",
+        "cross_platform_sleep.h": "c",
+        "temperature_control.h": "c"
     }
 }
