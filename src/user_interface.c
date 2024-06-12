@@ -5,6 +5,7 @@
 #include "../include/security_control.h" // Include header for security control functions
 #include "../include/user_interface.h" // Include header for user interface functions
 #include "../include/config.h" // Include configuration header
+#include "../include/cross_platform_sleep.h" // Include cross-platform sleep header
 
 // Integrate functions to display current temperature, AC state, light status, and security system status.
 // Ensure real-time updates in the main program.
@@ -78,7 +79,8 @@ void runHomeAutomationSystem() {
                 printf("Your choice is not valid\n");
                 break; // Default case if no valid choice is entered
         }
-    } 
+        cross_platform_sleep(2000); // Sleep for 2 second to reduce CPU usage
+    }
 }
 
 #ifdef TESTING
